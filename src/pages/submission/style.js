@@ -106,16 +106,7 @@ export const SubmissionItem = styled.li `
   list-style: none;
   width: 100%;
   height: 66px;
-`;
-
-export const SubmissionInfo = styled.div `
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  line-height: 66px;
-  padding-left: 10px;
-  font-size: 14px;
-  color: #453f86;
   border: 1px solid rgba(198, 217, 237, 0.3);
   box-shadow: 0 15px 20px #c6d9ed;
   transition: all 0.3s ease-out;
@@ -123,4 +114,47 @@ export const SubmissionInfo = styled.div `
   &:hover {
     box-shadow: 0 0 0 #fff, 0 15px 20px #c6d9ed inset;
   }
+`;
+
+export const Info = styled.div `
+  // box-sizing: border-box;
+  float: left;
+  line-height: 66px;
+  padding-left: 8px;
+  font-size: 14px;
+  color: #453f86;
 `
+export const Problem = styled.div `
+  float: left;
+  padding-left: 8px;
+  line-height: 66px;
+  font-size: 14px;
+  color:#737f8e;
+`;
+
+export const Submit = styled.span `
+  float: right;
+  margin-right: 6px;
+  margin-top: 24px;
+  padding: 3px 9px;
+  font-size: 12px;
+  text-align: center;
+  // border: 1px solid red;
+  border-radius: 3px;
+  &.succ {
+    color: #72b442;
+    background-color: #e2f0d9;
+  }
+  &.error {
+    color: #de544b;
+    background-color: #f6dbda;
+  }
+`;
+
+export const SubmitTime = styled.div `
+  float: right;
+  padding-right: 4%;
+  line-height: 66px;
+  font-size: 14px;
+  color: #123e97;
+`;
