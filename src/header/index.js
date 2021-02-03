@@ -6,7 +6,7 @@ import {
   HeaderName,
 } from './style';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+
 class Header extends PureComponent {
   render() {
     return (

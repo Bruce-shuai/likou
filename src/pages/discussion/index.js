@@ -3,7 +3,10 @@ import {
     DiscussionWrapper,
     DiscussionUl,
     DiscussionItem,
-    DiscussionInfo
+    Info,
+    Title,
+    DateTime,
+    Num
 }from './style';
 class Discussion extends PureComponent {
   render() {
@@ -13,20 +16,17 @@ class Discussion extends PureComponent {
         <input type="checkbox" id="nav" /><label for="nav"></label>
         <DiscussionUl>
           <DiscussionItem>
-            <DiscussionInfo>
-              项目1
-            </DiscussionInfo>
-
-          </DiscussionItem>
-          <DiscussionItem>
-            <DiscussionInfo>
-              项目2
-            </DiscussionInfo>
-          </DiscussionItem>
-          <DiscussionItem>
-            <DiscussionInfo>
-              项目3
-            </DiscussionInfo>
+            <Info>
+              发布讨论
+            </Info>
+            <Title>
+              【求职面试】区的个人感想
+            </Title>
+            <DateTime>
+              一天前
+            </DateTime>
+            <Num>4</Num>
+            <i className='iconfont'>&#xe629;</i>
           </DiscussionItem>
         </DiscussionUl>
       </DiscussionWrapper>

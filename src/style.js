@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import styled from 'styled-components';
 export const GlobalStyle = createGlobalStyle `
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -44,4 +44,12 @@ export const GlobalStyle = createGlobalStyle `
       border-collapse: collapse;
       border-spacing: 0;
     }
+    .bd {
+      background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    }
 `;
+
+// export const Background = styled.div `
+//   position: relative;
+//   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+// `;

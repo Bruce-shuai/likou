@@ -7,7 +7,8 @@ export const SubmissionWrapper = styled.div `
   /* 让元素的宽度占浏览器可视区域的宽度 */
   width: 100vm;
   height: 100px;
-  background-color: #e6f1f9;
+  border-radius: 4px;
+  background-color: #cddbec;
   /* 盒子阴影 */
   box-shadow: 0 10px 50px #c6d9ed;
   input {
@@ -117,7 +118,6 @@ export const SubmissionItem = styled.li `
 `;
 
 export const Info = styled.div `
-  // box-sizing: border-box;
   float: left;
   line-height: 66px;
   padding-left: 8px;

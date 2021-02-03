@@ -41,6 +41,7 @@ export const HeaderHome = styled.div `
 	width: 100%;
 	height: 100%;
   perspective: 300px;
+  border-radius: 4px;
   .iconfont {
     font-size: 32px;
     color: #262626;
@@ -50,6 +51,7 @@ export const HeaderHome = styled.div `
 export const HeaderName = styled.div `
   background-color:#d0dced;
   transform: translateY(25px) rotateX(-90deg);
+  border-radius: 4px;
   position: absolute;
 	top: 0;
 	left: 0;
