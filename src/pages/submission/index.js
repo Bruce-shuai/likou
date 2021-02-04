@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { actionCreators } from './store';
 import { connect } from 'react-redux';
 import {
     SubmissionWrapper,
@@ -10,12 +11,60 @@ import {
     SubmitTime
 }from './style';
 class Submission extends PureComponent {
+  chooseResult(num) {
+    if (num === 2) {
+      return 'succ';
+    } else {
+      return 'error'
+    }
+  }
+  chooseWord(num) {
+    if (num === 0) {
+      return '编译出错';
+    } else if (num === 1) {
+      return '运行出错';
+    } else if (num === 2) {
+      return '运行成功'
+    }
+  }
   render() {
+    const { dataList } = this.props;
     return (
       <SubmissionWrapper>
         <input type="checkbox" id="nav" /><label for="nav"></label>
         <SubmissionUl>
-          <SubmissionItem>
+          {
+            dataList.map((item)=>{
+              return (
+                <SubmissionItem key={item.submission.problemId}>
+            <Info>
+              我在题目
+            </Info>
+            <Problem>
+              {item.submission.problemName}
+            </Problem>
+            <Info>
+              中使用
+            </Info>
+            <Problem>
+              {item.submission.language}
+            </Problem>
+            <SubmitTime>
+              {item.submission.submitDateTime}
+            </SubmitTime>
+            <Submit className={this.chooseResult(item.submission.submitResult)}>
+              {this.chooseWord(item.submission.submitResult)} 
+            </Submit>
+          </SubmissionItem>
+              )
+            })
+          }
+
+
+
+
+
+          {/* <SubmissionItem>
             <Info>
               我在题目
             </Info>
@@ -54,11 +103,20 @@ class Submission extends PureComponent {
             <Submit className='error'>
               编译出错
             </Submit>
-          </SubmissionItem>
+          </SubmissionItem> */}
         </SubmissionUl>
+        { this.props.getMoreList() }
       </SubmissionWrapper>
     )
   }
 }
+const mapState = (state)=>({
+  dataList: state.getIn(['submission', 'data'])
+})
 
-export default Submission;
+const mapDispatch = (dispatch) => ({
+  getMoreList() {
+    dispatch(actionCreators.MoreList())
+  }
+})
+export default connect(mapState, mapDispatch)(Submission);

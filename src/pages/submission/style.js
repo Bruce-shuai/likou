@@ -126,6 +126,10 @@ export const Info = styled.div `
 `
 export const Problem = styled.div `
   float: left;
+  max-width: 90px;
+  white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
   padding-left: 8px;
   line-height: 66px;
   font-size: 14px;
