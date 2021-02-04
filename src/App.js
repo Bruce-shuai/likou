@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Submission from './pages/submission';
 import Discussion from './pages/discussion';
+import Content from './pages/content';
 import Header from './header';
 import { BrowserRouter, Route } from 'react-router-dom';
 // import { Background } from './style';
@@ -15,6 +16,7 @@ class App extends PureComponent {
           <React.Fragment>
             <Header />
             {/* <Route path='/' exact component={Header}></Route> */}
+            <Route path='/content' exact component={Content}></Route>
             <Route path='/submission' exact component={Submission}></Route>
             <Route path='/discussion' exact component={Discussion}></Route>
           </React.Fragment>

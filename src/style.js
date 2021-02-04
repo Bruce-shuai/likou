@@ -48,8 +48,3 @@ export const GlobalStyle = createGlobalStyle `
       background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     }
 `;
-
-// export const Background = styled.div `
-//   position: relative;
-//   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-// `;

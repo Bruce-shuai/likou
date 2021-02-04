@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1057007",
+      "name": "下拉按钮",
+      "font_class": "xialaanniu",
+      "unicode": "e6b6",
+      "unicode_decimal": 59062
+    },
+    {
+      "icon_id": "1089295",
+      "name": "点赞",
+      "font_class": "buoumaotubiao15",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "15685378",
+      "name": "个人头像",
+      "font_class": "gerentouxiang",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    },
+    {
       "icon_id": "8165730",
       "name": "评论",
       "font_class": "pinglun",

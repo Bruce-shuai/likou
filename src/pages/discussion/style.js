@@ -6,8 +6,9 @@ export const DiscussionWrapper = styled.div `
   margin: 10px 10%;
   /* 让元素的宽度占浏览器可视区域的宽度 */
   width: 100vm;
-  height: 100px;
-  background-color: #e6f1f9;    
+  height: 100px;  
+  border-radius: 4px;
+  background-color: #d0dbea;    
   /* 盒子阴影 */
   box-shadow: 0 10px 50px #c6d9ed;
   input {

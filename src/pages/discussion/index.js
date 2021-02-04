@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {
     DiscussionWrapper,
     DiscussionUl,
@@ -19,9 +21,11 @@ class Discussion extends PureComponent {
             <Info>
               发布讨论
             </Info>
+            <Link to='/content'>
             <Title>
               【求职面试】区的个人感想
             </Title>
+            </Link>
             <DateTime>
               一天前
             </DateTime>
