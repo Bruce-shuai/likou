@@ -5,7 +5,7 @@ const defaultState = fromJS({
 });
 
 export default (state = defaultState, action) => {
-    if (action.type === 'data') {
+    if (action.type === 'submission_data') {
         return state.set('data', action.data);
     }
     return state;

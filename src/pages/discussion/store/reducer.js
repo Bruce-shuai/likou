@@ -1,7 +1,11 @@
-const defaultState =  {
-
-};
+import { fromJS } from 'immutable';
+const defaultState =  fromJS({
+  data:[]
+});
 
 export default (state = defaultState, action) => {
-    return state;
+  if (action.type === 'discussion_data') {
+    return state.set('data', action.data);
+  }
+  return state;
 }

@@ -43,7 +43,6 @@ class Content extends PureComponent {
           <AInfo>
           <i className='iconfont'>&#xe6dd;</i>
           <User>
-            帅得乱七八糟
           </User>
           <div className='info'>
             但还有一种情况：
@@ -64,14 +63,13 @@ class Content extends PureComponent {
     }
   }
   render() {
-    const { talkBtn, handleTalkBtn } = this.props;
+    const { talkBtn, handleTalkBtn} = this.props;
     return (
       // Ul 相当于ul     item 相当于li
       <ContentWrapper>
         <Question>
         <i className='iconfont'>&#xe6dd;</i>
         <Title>
-          【求职面试
         </Title>
         <Info>
         <div>
@@ -111,4 +109,5 @@ const mapDispatch = (dispatch) => ({
     dispatch(action);
   }
 })
+
 export default connect(mapState, mapDispatch)(Content);

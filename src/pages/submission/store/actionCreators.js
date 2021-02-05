@@ -1,16 +1,15 @@
 import axios from 'axios';
-import { fromJS } from 'immutable';
 
 
 const addsubList = (result) => {
     return ({
-        type: 'data',
+        type: 'submission_data',
         data: result
     })
 }  
 
 
-export const MoreList = () => {
+export const MoreSubList = () => {
     return (dispatch) => {
       axios.get('/api/submission.json').then((res) => {
         // console.log(res.data.data);

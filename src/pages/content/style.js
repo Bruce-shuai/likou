@@ -2,21 +2,18 @@ import styled from 'styled-components';
 
 export const ContentWrapper = styled.div `
   margin: -30px 10%;  
-  // height: 100px;
   background: #eaf1f7;
   border-radius: 4px;
 `;
 
 export const Question = styled.div `
   overflow: hidden;
-  // min-height: 10rem;
   border-radius: 4px;
   border: 1 solid #dfe1e5;
   background: #d2dceb;
   .iconfont {
     float: left;
     line-height: 44px;
-    // padding-right: px;
     padding-left: 10px;
     font-size: 36px;
     color: #444444

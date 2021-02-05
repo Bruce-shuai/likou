@@ -105,7 +105,7 @@ class Submission extends PureComponent {
             </Submit>
           </SubmissionItem> */}
         </SubmissionUl>
-        { this.props.getMoreList() }
+        { this.props.getMoreSubList() }
       </SubmissionWrapper>
     )
   }
@@ -115,8 +115,8 @@ const mapState = (state)=>({
 })
 
 const mapDispatch = (dispatch) => ({
-  getMoreList() {
-    dispatch(actionCreators.MoreList())
+  getMoreSubList() {
+    dispatch(actionCreators.MoreSubList())
   }
 })
 export default connect(mapState, mapDispatch)(Submission);

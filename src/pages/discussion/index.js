@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { actionCreators } from './store';
 import { Link } from 'react-router-dom';
 import {
     DiscussionWrapper,
@@ -12,8 +13,8 @@ import {
 }from './style';
 class Discussion extends PureComponent {
   render() {
+    const { dataList, getMoreDisList } = this.props;
     return (
-      // Ul 相当于ul     item 相当于li
       <DiscussionWrapper>
         <input type="checkbox" id="nav" /><label for="nav"></label>
         <DiscussionUl>
@@ -23,19 +24,31 @@ class Discussion extends PureComponent {
             </Info>
             <Link to='/content'>
             <Title>
-              【求职面试】区的个人感想
+              { dataList.problemComment.problemName }
             </Title>
             </Link>
             <DateTime>
-              一天前
+            { dataList.problemComment.commentDatetime }
             </DateTime>
+            {/* 这里之后设置成length */}
             <Num>4</Num>
             <i className='iconfont'>&#xe629;</i>
           </DiscussionItem>
         </DiscussionUl>
+        { getMoreDisList() }
       </DiscussionWrapper>
     )
   }
 }
 
-export default Discussion;
+const mapState = (state)=>({
+  dataList: state.getIn(['discussion', 'data'])
+})
+
+const mapDispatch = (dispatch) => ({
+  getMoreDisList() {
+    dispatch(actionCreators.MoreDisList())
+  }
+})
+
+export default connect(mapState, mapDispatch)(Discussion);
