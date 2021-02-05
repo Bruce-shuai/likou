@@ -32,7 +32,7 @@ class Submission extends PureComponent {
     return (
       <SubmissionWrapper>
         <input type="checkbox" id="nav" /><label for="nav"></label>
-        <SubmissionUl>
+       <SubmissionUl>
           {
             dataList.map((item)=>{
               return (
@@ -105,9 +105,12 @@ class Submission extends PureComponent {
             </Submit>
           </SubmissionItem> */}
         </SubmissionUl>
-        { this.props.getMoreSubList() }
+        {/* { this.props.getMoreSubList() } */}
       </SubmissionWrapper>
     )
+  }
+  componentDidMount() {
+    this.props.getMoreSubList()
   }
 }
 const mapState = (state)=>({

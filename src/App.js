@@ -16,7 +16,7 @@ class App extends PureComponent {
           <React.Fragment>
             <Header />
             {/* <Route path='/' exact component={Header}></Route> */}
-            <Route path='/content' exact component={Content}></Route>
+            <Route path='/content/:id' exact component={Content}></Route>
             <Route path='/submission' exact component={Submission}></Route>
             <Route path='/discussion' exact component={Discussion}></Route>
           </React.Fragment>

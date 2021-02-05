@@ -1,18 +1,17 @@
 import axios from 'axios';
 
-const addDisList = (result) => {
+const addList = (result) => {
   return ({
-    type: 'discussion_data',
+    type: 'content_data',
     disdata: result
   })
 }
 
-export const MoreDisList = () => {
+export const MoreInfo = () => {
   return (dispatch) => {
     axios.get('/api/discussion.json').then((res) => {
       const result = res.data.data
-      // console.log(result);
-      dispatch(addDisList(result));
+      dispatch(addList(result));
     }) 
   }
 }

@@ -13,40 +13,53 @@ import {
 }from './style';
 class Discussion extends PureComponent {
   render() {
-    const { dataList, getMoreDisList } = this.props;
+    const { disList } = this.props;
     return (
       <DiscussionWrapper>
         <input type="checkbox" id="nav" /><label for="nav"></label>
+        {/* { console.log(disList)} */}
         <DiscussionUl>
-          <DiscussionItem>
+          {
+            disList.map((item) => {
+              return (
+              <DiscussionItem key={item.problemComment.problemId}>
             <Info>
               发布讨论
             </Info>
-            <Link to='/content'>
+            {/* Link换到具体页面可以看看换页那里 */}
+            <Link to={'/content/' + item.problemComment.problemId}>
             <Title>
-              { dataList.problemComment.problemName }
+            { item.problemComment.problemName }
             </Title>
             </Link>
             <DateTime>
-            { dataList.problemComment.commentDatetime }
+            { item.problemComment.commentDatetime }
             </DateTime>
             {/* 这里之后设置成length */}
-            <Num>4</Num>
+            {/* { console.log(item)} */}
+            <Num>{item.solutionComment.length}</Num>
             <i className='iconfont'>&#xe629;</i>
           </DiscussionItem>
+              )
+            })
+        }
         </DiscussionUl>
-        { getMoreDisList() }
+        {/* { this.props.getMoreDisList() } */}
       </DiscussionWrapper>
     )
+  }
+  componentDidMount() {
+    this.props.getMoreDisList(); 
   }
 }
 
 const mapState = (state)=>({
-  dataList: state.getIn(['discussion', 'data'])
+  disList: state.getIn(['discussion', 'data'])
 })
 
 const mapDispatch = (dispatch) => ({
   getMoreDisList() {
+    // alert(123)
     dispatch(actionCreators.MoreDisList())
   }
 })

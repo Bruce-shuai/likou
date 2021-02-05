@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const addsubList = (result) => {
     return ({
         type: 'submission_data',
